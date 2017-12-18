@@ -31,10 +31,11 @@ Complete [today's Kata](https://www.codewars.com/kata/indexed-capitalization) an
 
 ```
 export PORT=3000
-export CLIENT_URL='http://localhost:8080'
-export DATABASE_URL='postgres://localhost:5432/books_app'
+export CLIENT_URL=http://localhost:8080
 export TOKEN=1234 # Please make your own PIN
-export GOOGLE_API_KEY='your google books api key'
+export GOOGLE_API_KEY=your google books api key
+Mac:     export DATABASE_URL=postgres://localhost:5432/books_app
+Windows: export DATABASE_URL=postgres://USER:PASSWORD@localhost:5432/books_app
 ```
 
 ```sh
@@ -107,6 +108,7 @@ Today's refactor will implement the use of a 3rd party API, Google Books, which 
 *3. As a user, I want a form and designated space for output so that I can search for books and see the results in a single view.*
 
 - Add a new View to `index.html` with a class of `search-view` which contains a form for searching the Google Books API by author, title, or ISBN.
+  - The form should contain three individual inputs.
   - Include a button to click when your want to trigger your search.
 - Add a new View to `index.html` with a class of `search-results`, which contains a section and unordered list tag.
   - Your `<ul></ul>` should include an `id` attribute for targeting and insertion of dynamic content.
